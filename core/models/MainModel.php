@@ -28,7 +28,12 @@ class DatabaseClass{
             $this->dbpass = $_ENV['DBPWD']; // Password for DB
             $this->dbname = $_ENV['DBNAME']; // DB Name
             
-            $this->connection = new PDO("mysql:host={$this->dbhost};dbname={$this->dbname};", $this->dbuser, $this->dbpass);
+            $dsn = "mysql:host={$this->dbhost};dbname={$this->dbname}";
+            // For XAMPP on Linux, add Unix socket if host is localhost
+            if ($this->dbhost === 'localhost' && file_exists('/opt/lampp/var/mysql/mysql.sock')) {
+                $dsn .= ";unix_socket=/opt/lampp/var/mysql/mysql.sock";
+            }
+            $this->connection = new PDO($dsn, $this->dbuser, $this->dbpass);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             $this->connection->exec("SET time_zone = '+08:00'");

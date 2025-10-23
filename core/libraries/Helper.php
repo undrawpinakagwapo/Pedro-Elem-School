@@ -53,7 +53,8 @@ if (!function_exists('redirectToRoleHomeAndExit')) {
     function redirectToRoleHomeAndExit(): never {
         ensureSessionStarted();
         $slug = getDefaultSlugByRole();
-        header('Location: /component/' . $slug . '/index', true, 303);
+        $basePath = $_ENV['BASE_PATH'] ?? '';
+        header('Location: ' . $basePath . '/component/' . $slug . '/index', true, 303);
         exit();
     }
 }
@@ -62,6 +63,13 @@ if (!function_exists('redirectToRoleHomeAndExit')) {
 function getSegment(){
     $uri = $_SERVER['REQUEST_URI'] ?? '/';
     if (false !== $pos = strpos($uri, '?')) $uri = substr($uri, 0, $pos);
+    
+    // Strip BASE_PATH from the beginning if it exists
+    $basePath = $_ENV['BASE_PATH'] ?? '';
+    if ($basePath !== '' && strpos($uri, $basePath) === 0) {
+        $uri = substr($uri, strlen($basePath));
+    }
+    
     $uri = trim($uri, "/");
     $uri = rawurldecode($uri);
     $parts = $uri === '' ? [] : explode('/', $uri);
@@ -96,6 +104,13 @@ function generateToken($length = 32) {
     $length = max(8, (int)$length);
     $bytes = random_bytes((int)ceil($length / 2));
     return bin2hex($bytes);
+}
+
+function redirect($path) {
+    $basePath = $_ENV['BASE_PATH'] ?? '';
+    $url = $basePath . $path;
+    header('Location: ' . $url);
+    exit();
 }
 
 function formatControllerName($string) {

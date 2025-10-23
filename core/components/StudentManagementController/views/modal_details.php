@@ -1,7 +1,7 @@
 <?php 
     // Safe helpers (this part stays at the top)
     $val = fn($k) => htmlspecialchars($details[$k] ?? '');
-    $host = $_ENV['URL_HOST'] ?? '';
+    $host = $_ENV['BASE_PATH'] ?? '';
     $imgSrc = htmlspecialchars($host . ($details['image'] ?? ''));
 
     // QR helpers

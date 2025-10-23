@@ -255,10 +255,10 @@ $schoolYears  = isset($schoolYears) && is_array($schoolYears) ? $schoolYears : [
       <div class="sd-card mb-4">
         <div class="sd-panel-h"><div class="title">Quick Actions</div></div>
         <div class="sd-panel-b">
-          <a href="/component/student-management/index" class="sd-link"><span>🎓</span> Add Student</a>
-          <a href="/component/faculty-management/index" class="sd-link"><span>👩‍🏫</span> Manage Teachers</a>
-          <a href="/component/sf-reports/index" class="sd-link"><span>📄</span> School Forms</a>
-          <a href="/component/announcement/index" class="sd-link"><span>📢</span> Announcements</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/student-management/index" class="sd-link"><span>🎓</span> Add Student</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/faculty-management/index" class="sd-link"><span>👩‍🏫</span> Manage Teachers</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/sf-reports/index" class="sd-link"><span>📄</span> School Forms</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/announcement/index" class="sd-link"><span>📢</span> Announcements</a>
         </div>
       </div>
       <div class="sd-card">

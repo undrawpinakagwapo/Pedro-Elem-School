@@ -21,7 +21,7 @@
                   <p>You can reset your password here.</p>
                   <div class="panel-body">
     
-                    <form action="<?=$_ENV['URL_HOST'].'forgot_password' ?>" method="POST">
+                    <form action="<?=$_ENV['BASE_PATH']?>/forgot_password" method="POST">
     
                       <div class="form-group">
                         <div class="input-group">

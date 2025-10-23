@@ -4,7 +4,7 @@
 // helpers
 $h   = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');
 $val = fn($k) => htmlspecialchars($details[$k] ?? '', ENT_QUOTES, 'UTF-8');
-$imgSrc = $h(($_ENV['URL_HOST'] ?? '') . ($details['image'] ?? ''));
+$imgSrc = $h(($_ENV['BASE_PATH'] ?? '') . ($details['image'] ?? ''));
 
 $statusMap   = [1=>'Active', 0=>'Inactive'];
 $statusLabel = $details ? ($statusMap[(int)($details['status'] ?? -1)] ?? '—') : '—';
@@ -89,7 +89,7 @@ $modeTitle   = $details ? 'Faculty Profile • Edit Details' : 'Faculty Profile 
 
     <div class="fm-body">
       <!-- Submit normally so afterSubmit can redirect -->
-      <form id="facultyForm" method="POST" enctype="multipart/form-data" action="/component/faculty-management/afterSubmit">
+      <form id="facultyForm" method="POST" enctype="multipart/form-data" action="<?=$_ENV['BASE_PATH']?>/component/faculty-management/afterSubmit">
         <?php
 // Keep PK when editing
 $details = $details ?? [];

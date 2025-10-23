@@ -1,8 +1,8 @@
 /* components/ManageRegistrationController/js/custom.js */
 
 /* Base endpoints */
-const module = `${URL_BASED}component/manage-registration/`;
-const component = `component/manage-registration/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/manage-registration/';
+const component = 'component/manage-registration/';
 
 /* Small helper to build FormData quickly */
 function fd(obj = {}) {

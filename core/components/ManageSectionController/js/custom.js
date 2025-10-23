@@ -1,6 +1,6 @@
 /* components/ManageSectionController/js/custom.js */
-const module = `${URL_BASED}component/manage-section/`;
-const component = `component/manage-section/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/manage-section/';
+const component = 'component/manage-section/';
 
 /* ---------- Modal chrome remover (hide header + close buttons) ---------- */
 (function injectNoCloseStyle() {

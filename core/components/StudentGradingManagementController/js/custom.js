@@ -1,6 +1,7 @@
 (function () {
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/student-grading-management/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/student-grading-management/';
 
   function renderSelect(el, items, valKey, labelFn, current) {
     if (!el) return;

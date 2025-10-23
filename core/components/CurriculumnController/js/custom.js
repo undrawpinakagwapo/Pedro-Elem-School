@@ -1,7 +1,8 @@
 // components/CurriculumnController/js/custom.js
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/curriculumn/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/curriculumn/';
 
   /* ---------- utils ---------- */
   function byId(id){ return document.getElementById(id); }

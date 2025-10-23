@@ -28,14 +28,14 @@
         <?php 
           if(isset($_SESSION["user_id"])) {
             ?>
-              <button class="btn btn-primary w-100 text-uppercase" type="button"><a href="<?=$_ENV['URL_HOST'].'customer/customer/index?page=myorders&view=Account'?>" style="color:white">Profile</a></button>
+              <button class="btn btn-primary w-100 text-uppercase" type="button"><a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=myorders&view=Account" style="color:white">Profile</a></button>
               <hr>
-              <button class="btn btn-primary w-100 text-uppercase" type="button"><a href="<?=$_ENV['URL_HOST'].'userLogout'?>" style="color:white">Logout</a></button>
+              <button class="btn btn-primary w-100 text-uppercase" type="button"><a href="<?=$_ENV['BASE_PATH']?>/userLogout" style="color:white">Logout</a></button>
             
             <?php
           } else {
             ?>
-            <form action="<?=$_ENV['URL_HOST'].'auth' ?>" method="POST" class="aside-content">
+            <form action="<?=$_ENV['BASE_PATH']?>/auth" method="POST" class="aside-content">
               <input type="hidden" name="login_type" value="customer">
               <div class="form-floating mb-3">
                 <input name="email" type="text" class="form-control form-control_gray" >
@@ -54,14 +54,14 @@
                   <input name="remember" class="form-check-input form-check-input_fill" type="checkbox" value="" id="flexCheckDefault">
                   <label class="form-check-label text-secondary" for="flexCheckDefault">Remember me</label>
                 </div>
-                <a href="<?=$_ENV['URL_HOST'].'forgot_password' ?>" class="btn-text ms-auto">Lost password?</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/forgot_password" class="btn-text ms-auto">Lost password?</a>
               </div>
     
               <button class="btn btn-primary w-100 text-uppercase" type="submit">Log In</button>
     
               <div class="customer-option mt-4 text-center">
                 <span class="text-secondary">No account yet?</span>
-                <a href="<?=$_ENV['URL_HOST'].'customer/customer/index?page=register' ?>" class="btn-text js-show-register">Create Account</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=register" class="btn-text js-show-register">Create Account</a>
               </div>
             </form>
 

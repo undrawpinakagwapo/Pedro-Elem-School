@@ -206,13 +206,13 @@ window.__TD_BOOT__ = <?= json_encode([
         </div>
         <div class="sd-panel-b">
           <div class="sd-ql-list">
-            <a class="sd-ql" href="/component/student-attendance/index">
+            <a class="sd-ql" href="<?=$_ENV['BASE_PATH']?>/component/student-attendance/index">
               <i>🗓️</i> Attendance
             </a>
-            <a class="sd-ql" href="/component/student-grade-entry/index">
+            <a class="sd-ql" href="<?=$_ENV['BASE_PATH']?>/component/student-grade-entry/index">
               <i>📝</i> Grades
             </a>
-            <a class="sd-ql" href="/component/announcement/index">
+            <a class="sd-ql" href="<?=$_ENV['BASE_PATH']?>/component/announcement/index">
               <i>📣</i> Announcements
             </a>
           </div>
@@ -238,7 +238,7 @@ window.__TD_BOOT__ = <?= json_encode([
       <div class="sd-card mb-4">
         <div class="sd-panel-h">
           <div class="title">Absent Students (Today)</div>
-          <a href="/component/student-attendance/index" class="sd-muted">Open Attendance</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/student-attendance/index" class="sd-muted">Open Attendance</a>
         </div>
         <div class="sd-panel-b">
           <div id="sd-absent-list" class="sd-absent-list">

@@ -16,8 +16,9 @@ function sidebar($value, $parent = false, $const_display_component_SEGMENT)  {
             $sidebar .=   sidebar($val['child'], false, $const_display_component_SEGMENT);
             $sidebar .= '</li>';
         } else {
+            $basePath = $_ENV['BASE_PATH'] ?? '';
             $sidebar .= '<li class="'.$active.'">';
-            $sidebar .=   '<a href="/component/'.$key.'/index" class="waves-effect waves-dark" style="text-decoration:none">';
+            $sidebar .=   '<a href="'.$basePath.'/component/'.$key.'/index" class="waves-effect waves-dark" style="text-decoration:none">';
             $sidebar .=     '<span class="pcoded-micon"><i class="fa fa-'.$val['icon'].'"></i><b>D</b></span>';
             $sidebar .=     '<span class="pcoded-mtext" data-i18n="nav.dash.main">'.$val['Title'].'</span>';
             $sidebar .=     '<span class="pcoded-mcaret"></span>';
@@ -84,8 +85,8 @@ foreach ($componentPages as $key => $val) {
   <div class="pcoded-inner-navbar main-menu">
     <div class="">
       <div class="main-menu-header">
-        <!-- <img class="img-80 img-radius" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/images/avatar-blank.jpg" alt="User-Profile-Image"> -->
-        <img src="<?=$_ENV['URL_HOST']?>src/images/logos/OIP-removebg-preview.png" alt="User-Profile-Image">
+        <!-- <img class="img-80 img-radius" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/images/avatar-blank.jpg" alt="User-Profile-Image"> -->
+        <img src="<?=$_ENV['BASE_PATH']?>/src/images/logos/OIP-removebg-preview.png" alt="User-Profile-Image">
         <div class="user-details">
           <span id="more-details"><?=$_SESSION['username']?></span>
         </div>
@@ -97,7 +98,7 @@ foreach ($componentPages as $key => $val) {
           <li class="more-details">
             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
             <a href="#!"><i class="ti-settings"></i>Settings</a>
-            <a href="<?=$_ENV['URL_HOST']?>userLogout"><i class="ti-layout-sidebar-left"></i>Logout</a>
+            <a href="<?=$_ENV['BASE_PATH']?>/userLogout"><i class="ti-layout-sidebar-left"></i>Logout</a>
           </li>
         </ul>
       </div>

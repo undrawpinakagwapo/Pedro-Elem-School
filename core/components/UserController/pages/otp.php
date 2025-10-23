@@ -57,7 +57,7 @@
           <div class="card-body p-5 text-center">
             <h4>Verify</h4>
             <p>Your code was sent to you via SMS</p>
-                <form action="<?=$_ENV['URL_HOST'].'otp' ?>" method="POST">
+                <form action="<?=$_ENV['BASE_PATH']?>/otp" method="POST">
                     <input type="hidden" name="email" value="<?=$email?>" >
                     <input type="hidden" name="type" value="<?=isset($_GET["type"]) ? $_GET["type"]  : ''?>" >
 

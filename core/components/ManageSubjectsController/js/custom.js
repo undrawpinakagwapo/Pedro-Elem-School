@@ -1,5 +1,5 @@
-const module = `${URL_BASED}component/manage-subjects/`;
-const component = `component/manage-subjects/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/manage-subjects/';
+const component = 'component/manage-subjects/';
 
 /* ---------- Modal chrome: remove header + X completely ---------- */
 (function injectNoCloseStyle() {

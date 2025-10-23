@@ -145,8 +145,8 @@ $full    = trim($last . ', ' . $first . ($middle ? ' ' . $middle : ''));
 
         <!-- Optional footer actions -->
         <!-- <div class="mt-2 d-flex gap-2">
-          <a href="/component/my-grades/index" class="sd-btn">View Grades</a>
-          <a href="/component/my-grades/index" class="sd-btn" style="background:#fff;color:#2563eb;border:1px solid #2563eb">Enroll Course</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/my-grades/index" class="sd-btn">View Grades</a>
+          <a href="<?=$_ENV['BASE_PATH']?>/component/my-grades/index" class="sd-btn" style="background:#fff;color:#2563eb;border:1px solid #2563eb">Enroll Course</a>
         </div> -->
       </div>
     </div>
@@ -159,7 +159,7 @@ $full    = trim($last . ', ' . $first . ($middle ? ' ' . $middle : ''));
   <div class="sd-card mb-4" id="sd-att-card" data-limit="7">
     <div class="sd-panel-h">
       <div class="title">Recent Attendance</div>
-      <a href="/component/my-attendance/index" class="sd-muted">View More</a>
+      <a href="<?=$_ENV['BASE_PATH']?>/component/my-attendance/index" class="sd-muted">View More</a>
     </div>
     <div class="sd-panel-b" id="sd-att-list">
       <div class="sd-result">
@@ -169,10 +169,10 @@ $full    = trim($last . ', ' . $first . ($middle ? ' ' . $middle : ''));
   </div>
 
       <!-- Quick Links -->
-      <a href="/component/announcement/index" class="sd-link">
+      <a href="<?=$_ENV['BASE_PATH']?>/component/announcement/index" class="sd-link">
         <span>📣</span> View Announcement
       </a>
-      <a href="/component/complaints/index" class="sd-link">
+      <a href="<?=$_ENV['BASE_PATH']?>/component/complaints/index" class="sd-link">
         <span>⚠️</span> Complaint — Want to complain against someone?
       </a>
     </div>

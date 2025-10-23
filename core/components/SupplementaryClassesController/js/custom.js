@@ -1,6 +1,7 @@
 (function () {
   var base = typeof URL_BASED !== "undefined" ? URL_BASED : "/";
-  var module = base + "component/supplementary-classes/";
+  var sep = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + "component/supplementary-classes/";
 
   var CAN_EDIT = false; // set from boot/fetch
 

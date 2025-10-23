@@ -161,7 +161,7 @@ body { background: var(--bg); }
         <div class="card-body">
           <div class="avatar">
             <img id="preview"
-                 src="<?= htmlspecialchars(($_ENV['URL_HOST'] ?? '') . ($details['image'] ?? '')) ?>"
+                 src="<?= htmlspecialchars(($_ENV['BASE_PATH'] ?? '') . ($details['image'] ?? '')) ?>"
                  alt="Profile Image">
             <div class="overlay">
               <span>Profile Photo</span>

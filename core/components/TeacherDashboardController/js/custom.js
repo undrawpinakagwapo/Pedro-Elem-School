@@ -1,8 +1,9 @@
 // components/TeacherDashboardController/js/custom.js
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/teacher-dashboard/';
-  var grMod  = base + 'component/student-grade-entry/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/teacher-dashboard/';
+  var grMod  = base + sep + 'component/student-grade-entry/';
 
   /* ============ DOM & helpers ============ */
   function byId(id){ return document.getElementById(id); }
@@ -181,7 +182,7 @@
         var when  = it.start_date || it.created_at || '';
         var dateS = formatDateShort(when);
         return '' +
-          '<a class="sd-anno" href="/component/announcement/index">' +
+          '<a class="sd-anno" href="' + base + sep + 'component/announcement/index">' +
             '<i>📣</i>' +
             '<span class="sd-anno-title" title="'+esc(title)+'">'+esc(title)+'</span>' +
             (dateS ? '<span class="sd-anno-date">'+esc(dateS)+'</span>' : '') +

@@ -6,7 +6,7 @@
 
     // Safe helpers
     $val = fn($k) => htmlspecialchars($details[$k] ?? '');
-    $imgSrc = htmlspecialchars(($_ENV['URL_HOST'] ?? '') . ($details['image'] ?? ''));
+    $imgSrc = htmlspecialchars(($_ENV['BASE_PATH'] ?? '') . ($details['image'] ?? ''));
     $roleMap = [
         1 => 'Admin',
         2 => 'Teacher',

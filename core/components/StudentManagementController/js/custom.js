@@ -1,5 +1,5 @@
-const module = `${URL_BASED}component/student-management/`;
-const component = `component/student-management/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/student-management/';
+const component = 'component/student-management/';
 
 /** Inject a one-time style to hide any stray close buttons */
 (function injectModalStyleOnce() {

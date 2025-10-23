@@ -1,5 +1,5 @@
-const module = `${URL_BASED}component/curriculum-management/`;
-const component = `component/curriculum-management/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/curriculum-management/';
+const component = 'component/curriculum-management/';
 var tblAvailable;
 var tblSelected;
 

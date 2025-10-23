@@ -39,11 +39,10 @@ class UserController {
                 $BodySms = ' Code : ' . $token;
                 $this->componentHelper->sentSMS($rows[0]["contact_no"], $BodySms);
 
-                $Body = '<a href="'.$_ENV["URL_HOST"].'otp?email='.$rows[0]["email"].'"><button style="padding:12px; background-color:blue;color:white;border:none;">CLICK TO CHANGE PASSWORD</button></a><br><h2>CODE: '.$token.'</h2>';
+                $Body = '<a href="'.$_ENV["BASE_PATH"].'/otp?email='.$rows[0]["email"].'"><button style="padding:12px; background-color:blue;color:white;border:none;">CLICK TO CHANGE PASSWORD</button></a><br><h2>CODE: '.$token.'</h2>';
                 $this->componentHelper->sentToEmail($rows[0]["email"], "Forgot Password", $Body);
 
-                header('Location: /otp?email='.$rows[0]["email"]);
-                exit();
+                redirect('/otp?email='.$rows[0]["email"]);
             }
         }
 
@@ -68,11 +67,10 @@ class UserController {
            
             if (count($rows) > 0) {
                 if (isset($type) && $type == "verify") {
-                    header('Location: /');
+                    redirect('/');
                 } else {
-                    header('Location: /changepassword?email='.$email);
+                    redirect('/changepassword?email='.$email);
                 }
-                exit();
             }
         }
 
@@ -101,8 +99,7 @@ class UserController {
             
             $this->db->Update("UPDATE users SET password = ? WHERE user_id = ?", [$hashedPassword, $rows[0]["user_id"]]);
             
-            header('Location: /auth?type=success&message=Password changed successfully. Please log in.');
-            exit();
+            redirect('/auth?type=success&message=Password changed successfully. Please log in.');
         }
     }
 
@@ -167,8 +164,7 @@ class UserController {
 
     // If we reach here, it means either the user was not found or the password was wrong.
     session_destroy();
-    header('Location: /auth?type=warning&message=Invalid Credentials!. Please try again.');
-    exit();
+        redirect('/auth?type=warning&message=Invalid Credentials!. Please try again.');
 }
 
     public function authRegister(){
@@ -179,8 +175,7 @@ class UserController {
     $rows = $this->db->Select("SELECT * FROM users WHERE email = ? AND deleted = 0", [$email]);
     if (count($rows) > 0) {
         session_destroy();
-        header('Location: /auth?type=warning&message=Email already exist!.Please user another email!');
-        exit();
+        redirect('/auth?type=warning&message=Email already exist!.Please user another email!');
     }
 
     $token = generateToken();
@@ -200,8 +195,7 @@ class UserController {
     );
 
     session_destroy();
-    header('Location: /auth?type=success&message=Successfully Registered!');
-    exit();
+    redirect('/auth?type=success&message=Successfully Registered!');
 }
 
     public function userLogout() {
@@ -216,11 +210,11 @@ class UserController {
         session_destroy();
 
         // Everyone returns to /auth
-        header('Location: /auth');
-        exit();
+        redirect('/auth');
     }
 
     public function test() {
        echo "123";
     }
 }
+

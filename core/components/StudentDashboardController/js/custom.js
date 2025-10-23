@@ -1,8 +1,9 @@
 // Student Dashboard page scripts
 (function () {
   const BASE = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  const MY_GRADES_BASE = `${BASE}component/my-grades/`;             // subjects/grades
-  const STUD_ATT_BASE  = `${BASE}component/student-attendance/`;    // recent attendance
+  const sep = (BASE && !BASE.endsWith('/')) ? '/' : '';
+  const MY_GRADES_BASE = BASE + sep + 'component/my-grades/';             // subjects/grades
+  const STUD_ATT_BASE  = BASE + sep + 'component/student-attendance/';    // recent attendance
 
   const $ = (sel, root=document) => root.querySelector(sel);
 

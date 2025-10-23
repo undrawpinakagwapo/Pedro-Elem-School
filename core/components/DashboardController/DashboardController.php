@@ -24,8 +24,7 @@ class DashboardController
         if ($role !== $ADMIN_ROLE) {
             // Send teachers to their dashboard if you have it; otherwise pick a teacher page you do have.
             if ($role === $TEACHER_ROLE) {
-                header('Location: /component/teacher-dashboard/index'); exit;
-                // e.g. header('Location: /component/student-grading-management/index'); exit;
+                redirect('/component/teacher-dashboard/index');
             }
             http_response_code(403);
             echo 'Forbidden: Admins only.';

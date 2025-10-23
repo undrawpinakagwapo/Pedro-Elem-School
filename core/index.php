@@ -9,7 +9,11 @@ use FastRoute\RouteCollector;
 use function FastRoute\simpleDispatcher;
 
 // Load environment variables
-Dotenv::createImmutable(__DIR__)->load();
+if (file_exists(__DIR__ . '/config.env')) {
+    Dotenv::createImmutable(__DIR__, 'config.env')->load();
+} else {
+    Dotenv::createImmutable(__DIR__)->load();
+}
 
 // Include necessary files dynamically
 $files = [
@@ -62,6 +66,15 @@ $dispatcher = simpleDispatcher(function (RouteCollector $r) use ($db) {
 // Handle the request
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = rawurldecode(strtok($_SERVER['REQUEST_URI'], '?')); // Strip query string
+
+// Strip BASE_PATH from URI for routing
+$basePath = $_ENV['BASE_PATH'] ?? '';
+if ($basePath !== '' && strpos($uri, $basePath) === 0) {
+    $uri = substr($uri, strlen($basePath));
+}
+if ($uri === '') {
+    $uri = '/';
+}
 
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 

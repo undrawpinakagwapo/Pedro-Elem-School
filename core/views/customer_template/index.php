@@ -64,7 +64,7 @@
     <?php
         if(isset($js)) {
             for ($i=0; $i < count($js) ; $i++) { 
-                echo '<script src="'.$_ENV['URL_HOST'].'components/'.$js[$i].'"></script>';
+                echo '<script src="'.$_ENV['BASE_PATH'].'/components/'.$js[$i].'"></script>';
             }
         }
     ?>

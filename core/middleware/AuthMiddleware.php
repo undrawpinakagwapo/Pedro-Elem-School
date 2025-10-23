@@ -35,7 +35,8 @@ class AuthMiddleware
 
         // Must be logged in beyond this point
         if (empty($_SESSION['user_active'])) {
-            header('Location: /auth?type=warning&message=Please sign in first.');
+            $basePath = $_ENV['BASE_PATH'] ?? '';
+            header('Location: ' . $basePath . '/auth?type=warning&message=Please sign in first.');
             exit();
         }
 
@@ -46,14 +47,16 @@ class AuthMiddleware
             if (in_array($role, [1, 2, 3, 5], true)) {
                 return; // admin/teacher/principal/student OK
             }
-            header('Location: /auth?type=warning&message=Forbidden.');
+            $basePath = $_ENV['BASE_PATH'] ?? '';
+            header('Location: ' . $basePath . '/auth?type=warning&message=Forbidden.');
             exit();
         }
 
         // Optional: legacy redirect if any old /customer/* links still exist
         if ($module === 'customer') {
+            $basePath = $_ENV['BASE_PATH'] ?? '';
             $slug = getDefaultSlugByRole(); // e.g. student-dashboard for role 5
-            header('Location: /component/' . $slug . '/index', true, 301);
+            header('Location: ' . $basePath . '/component/' . $slug . '/index', true, 301);
             exit();
         }
 

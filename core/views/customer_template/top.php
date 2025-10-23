@@ -5,8 +5,8 @@
       <div class="header-middle border-0 position-relative py-4">
         <div class="container d-flex align-items-center">
           <div class="logo">
-            <a href="<?=$_ENV['URL_HOST']?>customer/customer/index">
-              <img src="<?=$_ENV['URL_HOST']?>src/images/logos/blogo.ico" width="60" alt="Uomo" class="logo__image">
+            <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index">
+              <img src="<?=$_ENV['BASE_PATH']?>/src/images/logos/blogo.ico" width="60" alt="Uomo" class="logo__image">
               <span style="font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:16px; ">Powerhouse Project AutoCare</span>
             </a>
           </div><!-- /.logo -->
@@ -15,25 +15,25 @@
             <ul class="navigation__list list-unstyled d-flex">
 
               <li class="navigation__item">
-                <a href="<?=$_ENV['URL_HOST']?>customer/customer/index" class="navigation__link">Home</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index" class="navigation__link">Home</a>
               </li>
 
 
               <li class="navigation__item">
-                <a href="<?=$_ENV['URL_HOST']?>customer/customer/index?page=shop" class="navigation__link">Shop</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=shop" class="navigation__link">Shop</a>
               </li>
 
 
               <li class="navigation__item">
-                <a href="<?=$_ENV['URL_HOST']?>customer/customer/index?page=about" class="navigation__link">About</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=about" class="navigation__link">About</a>
               </li>
 
               <li class="navigation__item">
-                <a href="<?=$_ENV['URL_HOST']?>customer/customer/index?page=faq" class="navigation__link">FAQs</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=faq" class="navigation__link">FAQs</a>
               </li>
              
               <li class="navigation__item">
-                <a href="<?=$_ENV['URL_HOST']?>customer/customer/index?page=myorders&view=Orders" class="navigation__link">My Profile</a>
+                <a href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=myorders&view=Orders" class="navigation__link">My Profile</a>
               </li>
              
             </ul><!-- /.navigation__list -->
@@ -45,7 +45,7 @@
             </div>
 
 
-            <a class="header-tools__item" href="<?=$_ENV['URL_HOST']?>customer/customer/index?page=myorders&view=notification">
+            <a class="header-tools__item" href="<?=$_ENV['BASE_PATH']?>/customer/customer/index?page=myorders&view=notification">
               <i class="fas fa-bell" style="font-size: 24px;"></i>
             </a>
 
@@ -69,7 +69,7 @@
            $sub = 'shop';
           ?>
 
-          <form action="<?=$_ENV['URL_HOST']?>customer/customer/index" method="GET" class="header-search search-field me-0 border-radius-10">
+          <form action="<?=$_ENV['BASE_PATH']?>/customer/customer/index" method="GET" class="header-search search-field me-0 border-radius-10">
             <input type="hidden" name="page" value="<?=$sub?>">
             <button class="btn header-search__btn" type="submit">
               <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_search" /></svg>

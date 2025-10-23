@@ -1,6 +1,7 @@
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/my-grades/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/my-grades/';
 
   function qs(name){
     try { return (new URLSearchParams(window.location.search)).get(name); }

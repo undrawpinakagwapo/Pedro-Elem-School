@@ -33,7 +33,7 @@
 
         <!-- Separate Logout -->
         <li class="header-logout">
-          <a href="<?=$_ENV['URL_HOST']?>userLogout" class="logout-link waves-effect waves-light">
+          <a href="<?=$_ENV['BASE_PATH']?>/userLogout" class="logout-link waves-effect waves-light">
             <i class="ti-power-off"></i>
             <!-- <span>Logout</span> -->
           </a>

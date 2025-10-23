@@ -7,32 +7,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="<?=$_ENV['URL_HOST']?>" />
-    <meta name="keywords" content="<?=$_ENV['URL_HOST']?>" />
-    <meta name="author" content="<?=$_ENV['URL_HOST']?>" />
+    <meta name="description" content="<?=$_ENV['BASE_PATH']?>" />
+    <meta name="keywords" content="<?=$_ENV['BASE_PATH']?>" />
+    <meta name="author" content="<?=$_ENV['BASE_PATH']?>" />
 
     <!-- ✅ New favicon set -->
-    <link rel="icon" href="<?=$_ENV['URL_HOST']?>src\images\logos\OIP-removebg-preview.png" type="image/x-icon">
+    <link rel="icon" href="<?=$_ENV['BASE_PATH']?>/src/images/logos/OIP-removebg-preview.png" type="image/x-icon">
 
     <!-- Google font-->     
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <!-- Required Framework -->
-    <link rel="stylesheet" type="text/css" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/css/bootstrap/css/bootstrap.min.css">
     <!-- waves.css -->
-    <link rel="stylesheet" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
     <!-- themify-icons line icon -->
-    <link rel="stylesheet" type="text/css" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/icon/icofont/css/icofont.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/icon/font-awesome/css/font-awesome.min.css">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="<?=$_ENV['URL_HOST']?>public/admin_template/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/css/style.css">
 
     <!-- Custom overrides: keep this AFTER all CSS links -->
     <style>
         body {
-            background: url('<?=$_ENV['URL_HOST']?>src/images/logos/pedro_logo.jpg') no-repeat center center fixed;
+            background: url('<?=$_ENV['BASE_PATH']?>/src/images/logos/pedro_logo.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;            /* full screen */
             margin: 0;
@@ -186,12 +186,12 @@
             <div class="row">
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
-                    <form action="<?=$_ENV['URL_HOST'].'auth' ?>" method="POST" class="md-float-material form-material">
+                    <form action="<?=$_ENV['BASE_PATH']?>/auth" method="POST" class="md-float-material form-material">
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <img src="<?=$_ENV['URL_HOST']?>src/images/logos/OIP-removebg-preview.png" width="100%" alt="logo.png">
+                                        <img src="<?=$_ENV['BASE_PATH']?>/src/images/logos/OIP-removebg-preview.png" width="100%" alt="logo.png">
                                         <h3 class="text-center">Sign In</h3>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                                             </label> -->
                                         </div>
                                         <!-- <div class="forgot-phone text-right f-right">
-                                            <a href="<?=$_ENV['URL_HOST'].'forgot_password' ?>" class="text-right f-w-600"> Forgot Password?</a>
+                                            <a href="<?=$_ENV['BASE_PATH']?>/forgot_password" class="text-right f-w-600"> Forgot Password?</a>
                                         </div> -->
                                     </div>
                                 </div>
@@ -242,18 +242,18 @@
         <!-- end of container-fluid -->
     </section>
   
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/jquery-ui/jquery-ui.min.js "></script>
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/popper.js/popper.min.js"></script>
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/bootstrap/js/bootstrap.min.js "></script>
-    <script src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/pages/waves/js/waves.min.js"></script>
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/SmoothScroll.js"></script>
-    <script src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/jquery-ui/jquery-ui.min.js "></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/bootstrap/js/bootstrap.min.js "></script>
+    <script src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/pages/waves/js/waves.min.js"></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/SmoothScroll.js"></script>
+    <script src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
     <!-- <script type="text/javascript" src="bower_components/i18next/js/i18next.min.js"></script>
     <script type="text/javascript" src="bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
     <script type="text/javascript" src="bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery-i18next/js/jquery-i18next.min.js"></script> -->
-    <script type="text/javascript" src="<?=$_ENV['URL_HOST']?>public/admin_template/assets/js/common-pages.js"></script>
+    <script type="text/javascript" src="<?=$_ENV['BASE_PATH']?>/public/admin_template/assets/js/common-pages.js"></script>
 </body>
 </html>

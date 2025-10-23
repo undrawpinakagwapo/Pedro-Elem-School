@@ -1,5 +1,5 @@
-const module = `${URL_BASED}component/user-management/`;
-const component = `component/user-management/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/user-management/';
+const component = 'component/user-management/';
 
 /* ---------------- Modal helpers ---------------- */
 function closeClosestModal(el) {

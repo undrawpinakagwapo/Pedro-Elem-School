@@ -195,7 +195,7 @@ body { background: var(--bg); }
           <!-- Avatar -->
           <div class="avatar">
             <img id="preview"
-                 src="<?= h(($_ENV['URL_HOST'] ?? '') . ($details['image'] ?? '')) ?>"
+                 src="<?= h(($_ENV['BASE_PATH'] ?? '') . ($details['image'] ?? '')) ?>"
                  alt="Profile Image">
             <div class="overlay">
               <span>Profile Photo</span>

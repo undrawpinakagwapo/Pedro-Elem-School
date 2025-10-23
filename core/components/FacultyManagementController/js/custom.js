@@ -1,4 +1,4 @@
-const module = `${URL_BASED}component/faculty-management/`;
+const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/faculty-management/';
 
 // OPEN modal (custom overlay HTML returned by PHP)
 $(document).on('click', '.openmodaldetails-modal', function () {

@@ -116,7 +116,7 @@ body { background:#f1f5f9; }
 
       <div class="kpi-row">
         <!-- Students -->
-        <a class="kpi-link" href="/component/student-management/index" aria-label="Go to Students">
+        <a class="kpi-link" href="<?=$_ENV['BASE_PATH']?>/component/student-management/index" aria-label="Go to Students">
           <div class="kpi-tile kpi-students" tabindex="0">
             <div class="kpi-ico">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -134,7 +134,7 @@ body { background:#f1f5f9; }
         </a>
 
         <!-- Teachers -->
-        <a class="kpi-link" href="/component/faculty-management/index" aria-label="Go to Teachers">
+        <a class="kpi-link" href="<?=$_ENV['BASE_PATH']?>/component/faculty-management/index" aria-label="Go to Teachers">
           <div class="kpi-tile kpi-teachers" tabindex="0">
             <div class="kpi-ico">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -152,7 +152,7 @@ body { background:#f1f5f9; }
         </a>
 
         <!-- Sections -->
-        <a class="kpi-link" href="/component/manage-section/index" aria-label="Go to Sections">
+        <a class="kpi-link" href="<?=$_ENV['BASE_PATH']?>/component/manage-section/index" aria-label="Go to Sections">
           <div class="kpi-tile kpi-sections" tabindex="0">
             <div class="kpi-ico">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -171,7 +171,7 @@ body { background:#f1f5f9; }
         </a>
 
         <!-- Subjects -->
-        <a class="kpi-link" href="/component/manage-subjects/index" aria-label="Go to Subjects">
+        <a class="kpi-link" href="<?=$_ENV['BASE_PATH']?>/component/manage-subjects/index" aria-label="Go to Subjects">
           <div class="kpi-tile kpi-subjects" tabindex="0">
             <div class="kpi-ico">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -188,7 +188,7 @@ body { background:#f1f5f9; }
         </a>
 
         <!-- Curricula -->
-        <a class="kpi-link" href="/component/curriculum-management/index" aria-label="Go to Curricula">
+        <a class="kpi-link" href="<?=$_ENV['BASE_PATH']?>/component/curriculum-management/index" aria-label="Go to Curricula">
           <div class="kpi-tile kpi-curricula" tabindex="0">
             <div class="kpi-ico">
               <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -1,7 +1,8 @@
 // My Attendance (student view) — monthly list + exact SY pill + holiday label
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/my-attendance/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/my-attendance/';
 
   function setDisabled(el, state){ if (el) el.disabled = !!state; }
 

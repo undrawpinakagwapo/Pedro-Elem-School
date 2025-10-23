@@ -12,7 +12,9 @@ var main = {
 
         $('.modalOpenCustom').modal('show');
        // Set the form's action attribute
-        $('.modalOpenCustom').find('form').attr('action', URL_BASED + action);
+        // Ensure there's a slash between URL_BASED and action
+        const separator = (URL_BASED && !URL_BASED.endsWith('/') && action && !action.startsWith('/')) ? '/' : '';
+        $('.modalOpenCustom').find('form').attr('action', URL_BASED + separator + action);
 
         // Set the title
         $('.modalOpenCustom').find('.modal-title').text(title);

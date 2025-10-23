@@ -1,6 +1,7 @@
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/student-grade-entry/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/student-grade-entry/';
 
   // ---- state for locking inputs after save ----
   var __gradesLocked = false;

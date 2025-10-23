@@ -1,7 +1,8 @@
 // custom.js
 (function(){
   var base   = (typeof URL_BASED !== 'undefined' ? URL_BASED : '/');
-  var module = base + 'component/student-attendance/';
+  var sep    = (base && !base.endsWith('/')) ? '/' : '';
+  var module = base + sep + 'component/student-attendance/';
 
   // Auto-save each scan to the server via controller->punch()
   var SCAN_PUNCH_TO_SERVER = true;

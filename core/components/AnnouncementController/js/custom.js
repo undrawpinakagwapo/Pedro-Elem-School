@@ -1,4 +1,4 @@
-const MODULE_BASE = `${URL_BASED}component/announcement/`;
+const MODULE_BASE = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/announcement/';
 const NS = '.announcement';
 let isOpeningModal = false;
 

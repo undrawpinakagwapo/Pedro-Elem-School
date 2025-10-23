@@ -9,7 +9,7 @@
 
 
         <!-- Favicon icon -->
-        <link rel="icon" href="<?=$_ENV['URL_HOST']?>src/images/logos/blogo.ico" type="image/x-icon">
+        <link rel="icon" href="<?=$_ENV['BASE_PATH']?>/src/images/logos/blogo.ico" type="image/x-icon">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,9 +25,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
         
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="<?=$_ENV['URL_HOST']?>public/customer_template/Demo18/css/plugins/swiper.min.css" type="text/css">
-        <link rel="stylesheet" href="<?=$_ENV['URL_HOST']?>public/customer_template/Demo18/css/style.css" type="text/css">
-        <link rel="stylesheet" href="<?=$_ENV['URL_HOST']?>public/customer_template/Demo18/css/plugins/jquery.fancybox.css" type="text/css">
+        <link rel="stylesheet" href="<?=$_ENV['BASE_PATH']?>/public/customer_template/Demo18/css/plugins/swiper.min.css" type="text/css">
+        <link rel="stylesheet" href="<?=$_ENV['BASE_PATH']?>/public/customer_template/Demo18/css/style.css" type="text/css">
+        <link rel="stylesheet" href="<?=$_ENV['BASE_PATH']?>/public/customer_template/Demo18/css/plugins/jquery.fancybox.css" type="text/css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,4 +61,4 @@
       </style>
     </head>
 
-  <body class="URL_HOST" data-url="<?=$_ENV['URL_HOST']?>">
+  <body class="URL_HOST" data-url="<?=$_ENV['BASE_PATH']?>">

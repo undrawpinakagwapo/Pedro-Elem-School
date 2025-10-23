@@ -1,7 +1,7 @@
 // components/ManageGradelevelController/js/custom.js
 (function () {
-  const module = `${URL_BASED}component/manage-gradelevel/`;
-  const component = `component/manage-gradelevel/`;
+  const module = URL_BASED + (URL_BASED && !URL_BASED.endsWith('/') ? '/' : '') + 'component/manage-gradelevel/';
+  const component = 'component/manage-gradelevel/';
 
   /* ---------- Modal polish: hide any Bootstrap/theme close buttons & header ---------- */
   (function injectNoCloseStyle() {
